@@ -21,8 +21,7 @@ titanic_data.drop('Ticket', axis=1, inplace = True)
 
 print(titanic_data.columns)
 
-# print(titanic_data.groupby ('Survived').size())
-# x = titanic_data[['Avg. Area Income', 'Avg. Area House Age', 'Avg. Area Number of Rooms', 'Avg. Area Number of Bedrooms', 'Area Population']]
+print(titanic_data.groupby ('Survived').size())
 
 x = titanic_data[['Survived']]
 y = titanic_data['Survived']
