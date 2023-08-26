@@ -39,4 +39,7 @@ y = titanic_data['Survived']
 x, x_test, y, y_test = train_test_split(x, y, test_size = 0.3)
 
 model = LinearRegression()
+
 print(model.fit(x, y))
+
+print(model.score(x,y))
