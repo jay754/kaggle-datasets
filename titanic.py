@@ -1,3 +1,5 @@
+# https://www.kaggle.com/competitions/titanic/data
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,19 +13,19 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn import metrics
 
-titanic_data = pd.read_csv('titanic_train.csv')
+titanic_data = pd.read_csv('train.csv')
 
-print(titanic_data.head(20))
+titanic_data.head(20)
 
-print(titanic_data.describe())
+titanic_data.describe()
 
-print(titanic_data[["Sex", "Survived"]].groupby(['Sex'], as_index=False))
+titanic_data[["Sex", "Survived"]].groupby(['Sex'], as_index=False)
 
-print(titanic_data.isnull().sum())
+titanic_data.isnull().sum()
 
-print(seaborn.countplot (x ="Survived", data = titanic_data))
+seaborn.countplot (x ="Survived", data = titanic_data)
 
-print(titanic_data["Age"].hist())
+titanic_data["Age"].hist()
 
 titanic_data.drop('Cabin', axis=1, inplace = True)
 titanic_data.drop('Fare', axis=1, inplace = True)
