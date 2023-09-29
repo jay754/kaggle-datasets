@@ -31,11 +31,12 @@ titanic_data.drop('Cabin', axis=1, inplace = True)
 titanic_data.drop('Fare', axis=1, inplace = True)
 titanic_data.drop('Ticket', axis=1, inplace = True)
 
-print(titanic_data.columns)
+titanic_data.columns
 
 print(titanic_data.groupby ('Survived').size())
 
 x = titanic_data[['Survived']]
+# x = titanic_data.drop (['Survived'], axis = 1 )
 y = titanic_data['Survived']
 
 x, x_test, y, y_test = train_test_split(x, y, test_size = 0.3)
